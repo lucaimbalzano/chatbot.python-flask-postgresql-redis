@@ -4,6 +4,11 @@ import json
 import requests
 import re
 from app.services.openai_service import generate_response
+from app.database.connection import (
+    get_thread_id, save_thread,
+    acquire_lock, release_lock
+)
+from app.database.connection import supabase
 
 def log_http_response(response):
     logging.info(f"Status: {response.status_code}")
@@ -72,21 +77,59 @@ def process_text_for_whatsapp(text):
 
 
 def process_whatsapp_message(body):
+    """
+    Here we process the message request and persist the conversation
+    """
     wa_id = body["entry"][0]["changes"][0]["value"]["contacts"][0]["wa_id"]
-    name = body["entry"][0]["changes"][0]["value"]["contacts"][0]["profile"]["name"]
+    name  = body["entry"][0]["changes"][0]["value"]["contacts"][0]["profile"]["name"]
 
-    message = body["entry"][0]["changes"][0]["value"]["messages"][0]
-    message_body = message["text"]["body"]
+    if not acquire_lock(wa_id):
+        logging.warning("Double-hit, worker already processing this user.")
+        return                      # Drop or queue later
 
-    # TODO: implement custom function here
-    # response = generate_response(message_body)
+    try:
+        msg_text = body["entry"][0]["changes"][0]["value"]["messages"][0]["text"]["body"]
 
-    # OpenAI Integration
-    response = generate_response(message_body, wa_id, name)
-    response = process_text_for_whatsapp(response)
+        # -----------------------------------------
+        # Thread lookup (Redis → Supabase → OpenAI)
+        # -----------------------------------------
+        thread_id = get_thread_id(wa_id)
+        if thread_id is None:
+            # First time we see this user ‒ create new thread via OpenAI
+            thread   = current_app.openai_client.beta.threads.create()
+            thread_id = thread.id
+            save_thread(wa_id, thread_id, current_app.config["OPENAI_ASSISTANT_ID"])
 
-    data = get_text_message_input(current_app.config["RECIPIENT_WAID"], response)
-    send_message(data)
+        # -----------------------------------------
+        # Generate reply with OpenAI
+        # -----------------------------------------
+        response_raw = generate_response(msg_text, wa_id, name)   # unchanged
+        response     = process_text_for_whatsapp(response_raw)
+
+        supabase.table("messages").insert({
+        "thread_id": thread_id,
+        "wa_id":     wa_id,
+        "role":      "user",
+        "content":   msg_text,
+        }).execute()
+
+        supabase.table("messages").insert({
+            "thread_id": thread_id,
+            "wa_id":     wa_id,
+            "role":      "assistant",
+            "content":   response_raw,
+        }).execute()
+
+
+        # -----------------------------------------
+        # Send back to WhatsApp
+        # -----------------------------------------
+        data = get_text_message_input(current_app.config["RECIPIENT_WAID"], response)
+        send_message(data)
+
+    finally:
+        release_lock(wa_id)
+
 
 
 def is_valid_whatsapp_message(body):

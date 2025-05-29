@@ -1,0 +1,38 @@
+services:
+  chatbot_app:
+    build: .
+    container_name: chatbot_app
+    environment:
+      OPENAI_API_KEY:  ${OPENAI_API_KEY}
+      OPENAI_ASSISTANT_ID: ${OPENAI_ASSISTANT_ID}
+      REDIS_URL: redis://redis:6379/0
+      SUPABASE_URL: ${SUPABASE_URL}
+      SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY}
+    depends_on:
+      - chatbot_redis
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  chatbot_redis:
+    image: redis:7
+    container_name: chatbot_redis
+    command: ["redis-server", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+  
+  # chatbot_ngrok:
+  #   image: ngrok/ngrok:latest
+  #   container_name: chatbot_ngrok
+  #   command: http chatbot_app:8000
+  #   environment:
+  #     NGROK_AUTHTOKEN: ${NGROK_AUTHTOKEN}
+  #   networks:
+  #     - default
+  #   depends_on:
+  #     - chatbot_app
+  #   restart: unless-stopped
+
+volumes:
+  redis-data:

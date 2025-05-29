@@ -3,8 +3,20 @@ from flask import Blueprint, jsonify
 from app.services.whatsapp_service import handle_message, verify
 
 
-webhook_blueprint = Blueprint("webhook", __name__)
 
+health_blueprint = Blueprint("health", __name__)
+
+@health_blueprint.route("/health", methods=["GET"])
+def health():
+    """
+    Simple liveness endpoint.
+    Do NOT put auth, signature checks, or DB calls here.
+    """
+    return jsonify(status="ok"), 200
+
+
+
+webhook_blueprint = Blueprint("webhook", __name__)
 
 @webhook_blueprint.route("/webhook", methods=["GET"])
 def webhook_get():

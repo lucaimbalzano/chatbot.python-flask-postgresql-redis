@@ -1,7 +1,11 @@
 flask
 python-dotenv
 openai
+redis==5.0.4
+supabase
+
 aiohttp
 requests
 jsonify
 flask-restx
+gunicorn>=22.0
