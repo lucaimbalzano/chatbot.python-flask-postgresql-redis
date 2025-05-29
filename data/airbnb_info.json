@@ -1,0 +1,561 @@
+[{
+    "id": "apt_001",
+    "title": "Stylish Designer Apartment in the Heart of Milan",
+    "description": "Experience the elegance of Milan in this fully renovated 1-bedroom designer apartment. Located just 5 minutes from the Duomo, the space offers a perfect mix of modern comfort and Italian charm.",
+    "location": {
+      "address": "Via Torino 15, 20123 Milan, Italy",
+      "latitude": 45.4628,
+      "longitude": 9.1871,
+      "neighborhood": "Centro Storico"
+    },
+    "price_per_night": 130,
+    "amenities": [
+      "WiFi",
+      "Air Conditioning",
+      "Fully Equipped Kitchen",
+      "Nespresso Machine",
+      "Balcony",
+      "Smart TV with Netflix",
+      "Washer & Dryer",
+      "Iron",
+      "Hairdryer",
+      "Towels and Linens",
+      "Elevator",
+      "Doorman"
+    ],
+    "apartment_details": {
+      "rooms": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "living_room": true,
+        "kitchen": true
+      },
+      "bed_type": "Queen Size Memory Foam",
+      "max_guests": 3,
+      "floor": 3,
+      "building_type": "Historic Building (Renovated)"
+    },
+    "wifi_speed_mbps": 120,
+    "check_in": "15:00",
+    "check_out": "11:00",
+    "host": {
+      "name": "Giulia R.",
+      "response_rate": "98%",
+      "superhost": true,
+      "contact": "+39 347 1234567"
+    },
+    "nearby_restaurants": [
+      {
+        "name": "Trattoria Milanese",
+        "address": "Via Santa Marta 11, Milan",
+        "cuisine": "Traditional Milanese",
+        "distance_m": 220
+      },
+      {
+        "name": "Risoelatte",
+        "address": "Via Manfredo Camperio 6, Milan",
+        "cuisine": "Retro Italian",
+        "distance_m": 400
+      },
+      {
+        "name": "Gino Sorbillo",
+        "address": "Via dei Mercanti 3, Milan",
+        "cuisine": "Neapolitan Pizza",
+        "distance_m": 350
+      }
+    ],
+    "nearby_bars": [
+      {
+        "name": "Nottingham Forest",
+        "address": "Viale Piave 1, Milan",
+        "specialty": "Experimental Cocktails",
+        "distance_m": 900
+      },
+      {
+        "name": "Bar Basso",
+        "address": "Via Plinio 39, Milan",
+        "specialty": "Negroni Sbagliato",
+        "distance_m": 1200
+      }
+    ],
+    "cocktail_places": [
+      {
+        "name": "Dry Milano",
+        "address": "Via Solferino 33, Milan",
+        "famous_for": "Craft Cocktails & Pizza",
+        "distance_m": 950
+      }
+    ],
+    "public_transportation": {
+      "metro": [
+        {
+          "line": "M1 - Red Line",
+          "station": "Duomo",
+          "distance_m": 300
+        }
+      ],
+      "bus": [
+        {
+          "line": "40",
+          "stop": "Via Torino",
+          "distance_m": 100
+        },
+        {
+          "line": "54",
+          "stop": "Cordusio",
+          "distance_m": 280
+        }
+      ],
+      "tram": [
+        {
+          "line": "2",
+          "stop": "Piazza Cordusio",
+          "distance_m": 300
+        }
+      ]
+    },
+    "uber_info": {
+      "available": true,
+      "pickup_spot": "Via Torino 13",
+      "promo_code": "X234432534",
+      "average_arrival_time_min": 4,
+      "est_price_to_airport": "€48"
+    },
+    "local_tips": [
+      "Best coffee: Marchesi 1824 (5 min walk)",
+      "Avoid driving — ZTL zone with fines",
+      "Go early to the Duomo to beat the crowds",
+      "Try the vintage shops on Via Giangiacomo Mora"
+    ],
+    "house_rules": {
+      "no_smoking": true,
+      "no_pets": false,
+      "quiet_hours": "22:00 to 08:00",
+      "no_parties": true
+    },
+    "safety": {
+      "carbon_monoxide_detector": true,
+      "smoke_detector": true,
+      "first_aid_kit": true,
+      "fire_extinguisher": true,
+      "security_camera_outside": true
+    }
+  },
+  {
+    "id": "apt_002",
+    "title": "Seaside Escape in Cinque Terre",
+    "description": "Wake up to ocean views in this charming 2-bedroom apartment perched above the cliffs of Vernazza. Ideal for couples or families looking to explore the Italian Riviera.",
+    "location": {
+      "address": "Via Roma 10, Vernazza, SP, Italy",
+      "latitude": 44.1357,
+      "longitude": 9.6833,
+      "neighborhood": "Cinque Terre"
+    },
+    "price_per_night": 150,
+    "amenities": [
+      "WiFi",
+      "Air Conditioning",
+      "Terrace with Sea View",
+      "Full Kitchen",
+      "Beach Towels",
+      "Espresso Machine",
+      "Self Check-in",
+      "Washer"
+    ],
+    "apartment_details": {
+      "rooms": {
+        "bedroom": 2,
+        "bathroom": 1,
+        "living_room": true,
+        "kitchen": true
+      },
+      "bed_type": "Double + Queen",
+      "max_guests": 4,
+      "floor": 2,
+      "building_type": "Traditional Ligurian House"
+    },
+    "wifi_speed_mbps": 40,
+    "check_in": "16:00",
+    "check_out": "10:00",
+    "host": {
+      "name": "Matteo D.",
+      "response_rate": "94%",
+      "superhost": true,
+      "contact": "+39 320 9988776"
+    },
+    "nearby_restaurants": [
+      {
+        "name": "Il Pirata delle Cinque Terre",
+        "address": "Via Gavino 36, Vernazza",
+        "cuisine": "Seafood & Ligurian",
+        "distance_m": 150
+      },
+      {
+        "name": "Belforte",
+        "address": "Via Guidoni 42, Vernazza",
+        "cuisine": "Mediterranean with Sea View",
+        "distance_m": 200
+      }
+    ],
+    "nearby_bars": [
+      {
+        "name": "Ananasso Bar",
+        "address": "Piazza Marconi, Vernazza",
+        "specialty": "Limoncino & local wine",
+        "distance_m": 100
+      }
+    ],
+    "cocktail_places": [
+      {
+        "name": "Bar La Torre",
+        "address": "Via Mazzini 2, Vernazza",
+        "famous_for": "Sunset Aperitivi",
+        "distance_m": 180
+      }
+    ],
+    "public_transportation": {
+      "train": [
+        {
+          "line": "Cinque Terre Express",
+          "station": "Vernazza",
+          "distance_m": 300
+        }
+      ]
+    },
+    "uber_info": {
+      "available": false,
+      "note": "Uber not available in Cinque Terre"
+    },
+    "local_tips": [
+      "Hike to Monterosso early for amazing views",
+      "Buy focaccia at Panifacio Rina",
+      "Avoid heavy luggage — many stairs"
+    ],
+    "house_rules": {
+      "no_smoking": true,
+      "no_pets": true,
+      "quiet_hours": "22:00 to 08:00",
+      "no_parties": true
+    },
+    "safety": {
+      "smoke_detector": true,
+      "first_aid_kit": true,
+      "fire_extinguisher": true
+    }
+  },
+  {
+    "id": "apt_003",
+    "title": "Urban Chic Loft with Rooftop in Florence",
+    "description": "Minimalist, stylish, and central. This rooftop loft is located steps away from Piazza della Repubblica and features stunning Duomo views from a private terrace.",
+    "location": {
+      "address": "Via del Corso 21, Florence, Italy",
+      "latitude": 43.7711,
+      "longitude": 11.2556,
+      "neighborhood": "Centro Storico"
+    },
+    "price_per_night": 175,
+    "amenities": [
+      "WiFi",
+      "Private Rooftop Terrace",
+      "Air Conditioning",
+      "Kitchenette",
+      "Workspace",
+      "Bluetooth Speakers",
+      "Rain Shower",
+      "Smart Lock"
+    ],
+    "apartment_details": {
+      "rooms": {
+        "bedroom": 1,
+        "bathroom": 1,
+        "kitchenette": true,
+        "living_space": true
+      },
+      "bed_type": "King Size",
+      "max_guests": 2,
+      "floor": 4,
+      "building_type": "Modernized Palazzo"
+    },
+    "wifi_speed_mbps": 85,
+    "check_in": "15:00",
+    "check_out": "10:30",
+    "host": {
+      "name": "Chiara V.",
+      "response_rate": "99%",
+      "superhost": true,
+      "contact": "+39 328 4445566"
+    },
+    "nearby_restaurants": [
+      {
+        "name": "Trattoria Mario",
+        "address": "Via Rosina 2, Florence",
+        "cuisine": "Tuscan & Florentine steak",
+        "distance_m": 400
+      },
+      {
+        "name": "Osteria Vini e Vecchi Sapori",
+        "address": "Via dei Magazzini 3r, Florence",
+        "cuisine": "Traditional Tuscan",
+        "distance_m": 350
+      }
+    ],
+    "nearby_bars": [
+      {
+        "name": "Move On",
+        "address": "Piazza del Duomo 6, Florence",
+        "specialty": "Live music and cocktails",
+        "distance_m": 250
+      }
+    ],
+    "cocktail_places": [
+      {
+        "name": "Locale Firenze",
+        "address": "Via delle Seggiole 12r, Florence",
+        "famous_for": "Award-winning cocktails & atmosphere",
+        "distance_m": 600
+      }
+    ],
+    "public_transportation": {
+      "tram": [
+        {
+          "line": "T1",
+          "stop": "Unità",
+          "distance_m": 600
+        }
+      ],
+      "bus": [
+        {
+          "line": "C2",
+          "stop": "Piazza della Repubblica",
+          "distance_m": 200
+        }
+      ]
+    },
+    "uber_info": {
+      "available": true,
+      "pickup_spot": "Via Roma 1",
+      "promo_code": "FIRERIDE20",
+      "average_arrival_time_min": 5,
+      "est_price_to_airport": "€35"
+    },
+    "local_tips": [
+      "Reserve museums (Uffizi, Accademia) early",
+      "Best gelato: Gelateria dei Neri",
+      "Sunset drinks at Piazzale Michelangelo"
+    ],
+    "house_rules": {
+      "no_smoking": true,
+      "no_pets": true,
+      "no parties": true
+    },
+    "safety": {
+      "carbon_monoxide_detector": true,
+      "smoke_detector": true,
+      "fire_extinguisher": true
+    }
+  },
+  {
+    "id": "apt_004",
+    "title": "Alpine Chalet with Sauna and Fireplace",
+    "description": "Escape to this luxury chalet in the Dolomites. Enjoy the mountain air, private sauna, and fireplace after skiing or hiking. Ideal for couples or small families seeking peace and nature.",
+    "location": {
+      "address": "Via Plan de Gralba 5, Selva di Val Gardena, Italy",
+      "latitude": 46.5536,
+      "longitude": 11.7605,
+      "neighborhood": "Val Gardena"
+    },
+    "price_per_night": 210,
+    "amenities": [
+      "Private Sauna",
+      "Fireplace",
+      "Mountain View Balcony",
+      "WiFi",
+      "Heated Floors",
+      "Ski Storage",
+      "Washer",
+      "Fully Equipped Kitchen"
+    ],
+    "apartment_details": {
+      "rooms": {
+        "bedroom": 2,
+        "bathroom": 2,
+        "living_room": true,
+        "kitchen": true
+      },
+      "bed_type": "King + Twin",
+      "max_guests": 4,
+      "floor": 1,
+      "building_type": "Wooden Chalet"
+    },
+    "wifi_speed_mbps": 55,
+    "check_in": "15:00",
+    "check_out": "10:00",
+    "host": {
+      "name": "Lukas H.",
+      "response_rate": "97%",
+      "superhost": true,
+      "contact": "+39 339 7894561"
+    },
+    "nearby_restaurants": [
+      {
+        "name": "Rifugio Emilio Comici",
+        "address": "Plan de Gralba 24, Selva",
+        "cuisine": "Gourmet Alpine",
+        "distance_m": 800
+      },
+      {
+        "name": "La Stua",
+        "address": "Strada Puez 12, Selva",
+        "cuisine": "South Tyrolean",
+        "distance_m": 950
+      }
+    ],
+    "nearby_bars": [
+      {
+        "name": "Luislkeller",
+        "address": "Str. Meisules 157, Selva",
+        "specialty": "Après-ski & local brews",
+        "distance_m": 700
+      }
+    ],
+    "cocktail_places": [
+      {
+        "name": "La Bula",
+        "address": "Str. Freina 22, Selva",
+        "famous_for": "Hot cocktails and Alpine spritz",
+        "distance_m": 600
+      }
+    ],
+    "public_transportation": {
+      "bus": [
+        {
+          "line": "350",
+          "stop": "Plan de Gralba",
+          "distance_m": 120
+        }
+      ]
+    },
+    "uber_info": {
+      "available": false,
+      "note": "Uber not available in mountain area"
+    },
+    "local_tips": [
+      "Book ski passes online early",
+      "Best sunrise hike: Seceda ridge",
+      "Local speck and cheese tasting at village market"
+    ],
+    "house_rules": {
+      "no_smoking": true,
+      "no_pets": false,
+      "quiet_hours": "21:00 to 08:00",
+      "no_parties": true
+    },
+    "safety": {
+      "smoke_detector": true,
+      "fire_extinguisher": true,
+      "first_aid_kit": true
+    }
+  },
+  {
+    "id": "apt_005",
+    "title": "Beachfront Boho Villa with Hammock",
+    "description": "Soak in the sun from this stylish boho-chic villa on the beach. With direct access to the sea, palm-shaded terraces, and colorful interiors, this is your ideal Mediterranean escape.",
+    "location": {
+      "address": "Via Lungomare 2, San Vito Lo Capo, Italy",
+      "latitude": 38.1747,
+      "longitude": 12.7323,
+      "neighborhood": "San Vito Lo Capo Beachfront"
+    },
+    "price_per_night": 165,
+    "amenities": [
+      "Beachfront Access",
+      "WiFi",
+      "Outdoor Shower",
+      "Hammock",
+      "Barbecue Grill",
+      "Sun Loungers",
+      "Full Kitchen",
+      "Air Conditioning"
+    ],
+    "apartment_details": {
+      "rooms": {
+        "bedroom": 2,
+        "bathroom": 1,
+        "kitchen": true,
+        "living_room": true
+      },
+      "bed_type": "Queen + Single + Sofa Bed",
+      "max_guests": 5,
+      "floor": 0,
+      "building_type": "Detached Villa"
+    },
+    "wifi_speed_mbps": 35,
+    "check_in": "16:00",
+    "check_out": "11:00",
+    "host": {
+      "name": "Elena S.",
+      "response_rate": "91%",
+      "superhost": false,
+      "contact": "+39 388 5647891"
+    },
+    "nearby_restaurants": [
+      {
+        "name": "Ristorante Gna Sara",
+        "address": "Via Duca degli Abruzzi 8, San Vito Lo Capo",
+        "cuisine": "Couscous & Seafood",
+        "distance_m": 350
+      },
+      {
+        "name": "Profumi di Cous Cous",
+        "address": "Via Regina Margherita 80, San Vito",
+        "cuisine": "Sicilian-Arab Fusion",
+        "distance_m": 200
+      }
+    ],
+    "nearby_bars": [
+      {
+        "name": "Beach Bar San Vito",
+        "address": "Lungomare Mattarella, San Vito",
+        "specialty": "Granite & Cocktails",
+        "distance_m": 120
+      }
+    ],
+    "cocktail_places": [
+      {
+        "name": "Cous Cous Cafe",
+        "address": "Via Mondello 9, San Vito",
+        "famous_for": "Island-style Mojito",
+        "distance_m": 160
+      }
+    ],
+    "public_transportation": {
+      "bus": [
+        {
+          "line": "Autoservizi Russo",
+          "stop": "Lungomare San Vito",
+          "distance_m": 150
+        }
+      ]
+    },
+    "uber_info": {
+      "available": false,
+      "note": "No Uber – local taxis available"
+    },
+    "local_tips": [
+      "Best beach spot before 9:00am",
+      "Try almond granita from the beachfront bar",
+      "Don't miss sunset at Capo San Vito lighthouse"
+    ],
+    "house_rules": {
+      "no_smoking": true,
+      "no_pets": true,
+      "quiet_hours": "23:00 to 08:00",
+      "no parties": true
+    },
+    "safety": {
+      "smoke_detector": true,
+      "fire_extinguisher": true,
+      "emergency_contact_list": true
+    }
+  } 
+]
