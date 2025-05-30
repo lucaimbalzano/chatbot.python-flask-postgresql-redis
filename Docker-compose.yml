@@ -1,18 +1,18 @@
 services:
-  chatbot_app:
-    build: .
-    container_name: chatbot_app
-    environment:
-      OPENAI_API_KEY:  ${OPENAI_API_KEY}
-      OPENAI_ASSISTANT_ID: ${OPENAI_ASSISTANT_ID}
-      REDIS_URL: redis://redis:6379/0
-      SUPABASE_URL: ${SUPABASE_URL}
-      SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY}
-    depends_on:
-      - chatbot_redis
-    ports:
-      - "8000:8000"
-    restart: unless-stopped
+  # chatbot_app:
+  #   build: .
+  #   container_name: chatbot_app
+  #   environment:
+  #     OPENAI_API_KEY:  ${OPENAI_API_KEY}
+  #     OPENAI_ASSISTANT_ID: ${OPENAI_ASSISTANT_ID}
+  #     REDIS_URL: redis://chatbot_redis:6379/0 
+  #     SUPABASE_URL: ${SUPABASE_URL}
+  #     SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY}
+  #   depends_on:
+  #     - chatbot_redis
+  #   ports:
+  #     - "8000:8000"
+  #   restart: unless-stopped
 
   chatbot_redis:
     image: redis:7
@@ -22,6 +22,15 @@ services:
       - redis-data:/data
     restart: unless-stopped
   
+  chatbot_redisinsight:
+    image: redislabs/redisinsight:latest
+    container_name: redisinsight
+    ports:
+      - "5540:5540"  # Espone RedisInsight su localhost:5540
+    restart: unless-stopped
+    depends_on:
+      - chatbot_redis
+
   # chatbot_ngrok:
   #   image: ngrok/ngrok:latest
   #   container_name: chatbot_ngrok
