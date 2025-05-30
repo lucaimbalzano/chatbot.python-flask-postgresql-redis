@@ -3,6 +3,7 @@ import logging
 import re
 import requests
 from flask import current_app, jsonify, request
+import tiktoken
 
 # OpenAI helper
 from app.services.openai_service import (
@@ -106,22 +107,28 @@ def process_whatsapp_message(body: dict):
         response_raw = generate_response(msg_text, wa_id, name)
         response_txt = process_text_for_whatsapp(response_raw)
 
+        enc = tiktoken.encoding_for_model("gpt-4-1106-preview")
+        tokensSys = enc.encode(response_txt)    
+        tokensUser = enc.encode(msg_text)
+
         # ---------- Persist i messaggi ----------
         supabase.table("messages").insert({
             "thread_id": internal_id,
             "role":      "user",
             "content":   msg_text,
+            "tokens": len(tokensUser)
         }).execute()
 
         supabase.table("messages").insert({
             "thread_id": internal_id,
             "role":      "assistant",
             "content":   response_raw,
+            "tokens": len(tokensSys)
         }).execute()
 
         # ---------- Send reply to WhatsApp ----------
         payload = get_text_message_input(
-            current_app.config["RECIPIENT_WAID"],
+            wa_id,
             response_txt,
         )
         send_message(payload)
@@ -145,7 +152,7 @@ def is_valid_whatsapp_message(body: dict) -> bool:
 
 def handle_message():
     body = request.get_json()
-
+    logging.debug("handle_message body:\n%s", json.dumps(body, indent=2, ensure_ascii=False))
     # Stato “sent/delivered/read”
     if (
         body.get("entry", [{}])[0]

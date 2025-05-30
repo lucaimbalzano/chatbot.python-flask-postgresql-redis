@@ -12,3 +12,4 @@ requests
 jsonify
 flask-restx
 gunicorn>=22.0
+tiktoken
