@@ -2,7 +2,8 @@ flask
 python-dotenv
 openai
 redis==5.0.4
-supabase>=2.4.1,<3
+#supabase>=2.4.1,<3
+supabase
 gotrue>=2.4.1,<3  
 postgrest>=0.14,<1
 httpx>=0.25,<0.27  
